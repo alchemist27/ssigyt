@@ -66,6 +66,13 @@
   font-weight: bold;
 }
 
+.logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 /* 헤더 중앙 - 검색 */
 .header-center {
   flex: 1;

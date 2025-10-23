@@ -65,8 +65,8 @@ async function loadSidebar() {
     const settingsLink = sidebarPlaceholder.querySelector('[data-settings-link]');
 
     if (createLink) {
-      createLink.href = pathDepth + 'pages/create.html';
-      if (currentPage === 'create.html') createLink.classList.add('active');
+      createLink.href = pathDepth + 'pages/modelling.html';
+      if (currentPage === 'modelling.html') createLink.classList.add('active');
     }
     if (mapLink) {
       mapLink.href = pathDepth + 'pages/map.html';
