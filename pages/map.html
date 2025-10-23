@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지도 - 씨익</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <link rel="stylesheet" href="../css/map.css">
+</head>
+<body>
+  <!-- 헤더 -->
+  <div id="header-placeholder"></div>
+
+  <!-- 사이드바 -->
+  <div id="sidebar-placeholder"></div>
+
+  <!-- 메인 콘텐츠 - 지도 -->
+  <main class="main-content map-main-content">
+    <div class="map-container">
+      <!-- 지도 뷰 -->
+      <div class="map-view">
+        <div id="map" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+          <div style="text-align: center;">
+            <svg style="width: 80px; height: 80px; margin-bottom: 16px; opacity: 0.5;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <p>맵 API 연동 예정</p>
+          </div>
+        </div>
+
+        <!-- 지도 검색 -->
+        <div class="map-search">
+          <input type="text" class="map-search-input" placeholder="장소, 업체명으로 검색...">
+          <button class="map-search-btn">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 지도 컨트롤 -->
+        <div class="map-controls">
+          <button class="map-control-btn" title="확대" onclick="console.log('Zoom in')">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+          </button>
+          <button class="map-control-btn" title="축소" onclick="console.log('Zoom out')">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 모바일 사이드바 토글 -->
+        <button class="map-toggle-sidebar" onclick="toggleMapSidebar()">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- 지도 사이드바 -->
+      <aside class="map-sidebar">
+        <div class="map-sidebar-header">
+          <h2 class="map-sidebar-title">필터</h2>
+
+          <!-- 업체 유형 드롭다운 -->
+          <div class="map-filter-group">
+            <label class="map-filter-label">업체 유형</label>
+            <select class="map-filter-select">
+              <option value="all">전체</option>
+              <option value="interior">인테리어</option>
+              <option value="furniture">가구</option>
+              <option value="lighting">조명</option>
+              <option value="materials">자재</option>
+            </select>
+          </div>
+
+          <!-- 거리 드롭다운 -->
+          <div class="map-filter-group">
+            <label class="map-filter-label">거리</label>
+            <select class="map-filter-select">
+              <option value="1">1km 이내</option>
+              <option value="3">3km 이내</option>
+              <option value="5">5km 이내</option>
+              <option value="10">10km 이내</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="map-sidebar-content">
+          <h3 class="map-results-title">검색 결과</h3>
+          <!-- 장소 카드 1 -->
+          <div class="map-place-card">
+            <div class="map-place-card-content">
+              <h3 class="map-place-name">모던 피니셔</h3>
+              <p class="map-place-address">서울시 강남구 테헤란로 123</p>
+              <p class="map-place-distance">거리: 500m</p>
+              <div class="map-place-rating">
+                <span class="map-place-star">★★★★☆</span>
+                <span>4.2 (128개 리뷰)</span>
+              </div>
+              <div class="map-place-actions">
+                <button class="map-place-btn primary">상세보기</button>
+                <button class="map-place-btn secondary">연락하기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 장소 카드 2 -->
+          <div class="map-place-card">
+            <div class="map-place-card-content">
+              <h3 class="map-place-name">씨엑씨 인테리어</h3>
+              <p class="map-place-address">서울시 강남구 역삼로 456</p>
+              <p class="map-place-distance">거리: 800m</p>
+              <div class="map-place-rating">
+                <span class="map-place-star">★★★★★</span>
+                <span>4.8 (89개 리뷰)</span>
+              </div>
+              <div class="map-place-actions">
+                <button class="map-place-btn primary">상세보기</button>
+                <button class="map-place-btn secondary">연락하기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 장소 카드 3 -->
+          <div class="map-place-card">
+            <div class="map-place-card-content">
+              <h3 class="map-place-name">럭셔리 조명</h3>
+              <p class="map-place-address">서울시 서초구 서초대로 789</p>
+              <p class="map-place-distance">거리: 1.2km</p>
+              <div class="map-place-rating">
+                <span class="map-place-star">★★★★☆</span>
+                <span>4.0 (76개 리뷰)</span>
+              </div>
+              <div class="map-place-actions">
+                <button class="map-place-btn primary">상세보기</button>
+                <button class="map-place-btn secondary">연락하기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 장소 카드 4 -->
+          <div class="map-place-card">
+            <div class="map-place-card-content">
+              <h3 class="map-place-name">프리미엄 건설</h3>
+              <p class="map-place-address">서울시 강남구 논현로 321</p>
+              <p class="map-place-distance">거리: 1.5km</p>
+              <div class="map-place-rating">
+                <span class="map-place-star">★★★★★</span>
+                <span>4.7 (156개 리뷰)</span>
+              </div>
+              <div class="map-place-actions">
+                <button class="map-place-btn primary">상세보기</button>
+                <button class="map-place-btn secondary">연락하기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="../js/common.js"></script>
+  <script>
+    // 지도 필터 (select)
+    document.querySelectorAll('.map-filter-select').forEach(select => {
+      select.addEventListener('change', () => {
+        console.log('필터 변경:', select.name, select.value);
+      });
+    });
+
+    // 장소 카드 클릭
+    document.querySelectorAll('.map-place-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.map-place-btn')) return;
+
+        document.querySelectorAll('.map-place-card').forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        console.log('장소 선택:', card.querySelector('.map-place-name').textContent);
+      });
+    });
+
+    // 모바일 사이드바 토글
+    function toggleMapSidebar() {
+      const sidebar = document.querySelector('.map-sidebar');
+      sidebar.classList.toggle('expanded');
+    }
+
+    // 모바일에서 사이드바 헤더 클릭 시 확장/축소
+    if (window.innerWidth <= 768) {
+      const sidebarHeader = document.querySelector('.map-sidebar-header');
+      if (sidebarHeader) {
+        sidebarHeader.addEventListener('click', toggleMapSidebar);
+      }
+    }
+  </script>
+</body>
+</html>

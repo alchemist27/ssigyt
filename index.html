@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="씨익 - 프로젝트, 3D 라이브러리, 상품을 한곳에서">
+  <title>씨익 - 홈</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/card.css">
+</head>
+<body>
+  <!-- 헤더 -->
+  <div id="header-placeholder"></div>
+
+  <!-- 사이드바 -->
+  <div id="sidebar-placeholder"></div>
+
+  <!-- 메인 콘텐츠 -->
+  <main class="main-content">
+    <div class="content-wrapper">
+      <!-- 필터 바 -->
+      <div class="filter-bar">
+        <div class="filter-tags">
+          <button class="filter-tag" data-filter="전체">전체</button>
+          <button class="filter-tag" data-filter="상품">상품</button>
+          <button class="filter-tag" data-filter="3D라이브러리">3D라이브러리</button>
+          <button class="filter-tag" data-filter="인테리어">인테리어</button>
+          <button class="filter-tag" data-filter="편안함">편안함</button>
+          <button class="filter-tag" data-filter="안정적인">안정적인</button>
+          <button class="filter-tag" data-filter="포근한">포근한</button>
+          <button class="filter-tag" data-filter="즐거운">즐거운</button>
+          <button class="filter-tag" data-filter="행복한">행복한</button>
+          <button class="filter-tag" data-filter="설레는">설레는</button>
+          <button class="filter-tag" data-filter="기대되는">기대되는</button>
+          <button class="filter-tag" data-filter="희망찬">희망찬</button>
+          <button class="filter-tag" data-filter="긍정적인">긍정적인</button>
+          <button class="filter-tag" data-filter="불안한">불안한</button>
+          <button class="filter-tag" data-filter="답답한">답답한</button>
+          <button class="filter-tag" data-filter="폐쇄적인">폐쇄적인</button>
+          <button class="filter-tag" data-filter="삭막한">삭막한</button>
+          <button class="filter-tag" data-filter="고독한">고독한</button>
+          <button class="filter-tag" data-filter="우울한">우울한</button>
+          <button class="filter-tag" data-filter="쓸쓸한">쓸쓸한</button>
+          <button class="filter-tag" data-filter="긴장되는">긴장되는</button>
+          <button class="filter-tag" data-filter="초조한">초조한</button>
+          <button class="filter-tag" data-filter="불쾌한">불쾌한</button>
+          <button class="filter-tag" data-filter="신성한">신성한</button>
+          <button class="filter-tag" data-filter="경건한">경건한</button>
+          <button class="filter-tag" data-filter="낭만적">낭만적</button>
+          <button class="filter-tag" data-filter="역사적">역사적</button>
+          <button class="filter-tag" data-filter="현대적">현대적</button>
+          <button class="filter-tag" data-filter="미래지향적">미래지향적</button>
+          <button class="filter-tag" data-filter="자연친화적">자연친화적</button>
+          <button class="filter-tag" data-filter="인공적">인공적</button>
+          <button class="filter-tag" data-filter="밝다">밝다</button>
+          <button class="filter-tag" data-filter="어둡다">어둡다</button>
+          <button class="filter-tag" data-filter="넓다">넓다</button>
+          <button class="filter-tag" data-filter="좁다">좁다</button>
+          <button class="filter-tag" data-filter="높다">높다</button>
+          <button class="filter-tag" data-filter="낮다">낮다</button>
+          <button class="filter-tag" data-filter="따뜻하다">따뜻하다</button>
+          <button class="filter-tag" data-filter="차갑다">차갑다</button>
+          <button class="filter-tag" data-filter="화려한">화려한</button>
+          <button class="filter-tag" data-filter="소박한">소박한</button>
+          <button class="filter-tag" data-filter="아늑한">아늑한</button>
+          <button class="filter-tag" data-filter="응장하다">응장하다</button>
+          <button class="filter-tag" data-filter="아기자기">아기자기</button>
+          <button class="filter-tag" data-filter="조용">조용</button>
+          <button class="filter-tag" data-filter="시끄럽다">시끄럽다</button>
+          <button class="filter-tag" data-filter="정적">정적</button>
+          <button class="filter-tag" data-filter="활기차다">활기차다</button>
+          <button class="filter-tag" data-filter="웅장">웅장</button>
+          <button class="filter-tag" data-filter="서늘">서늘</button>
+          <button class="filter-tag" data-filter="부드럽다">부드럽다</button>
+          <button class="filter-tag" data-filter="거칠다">거칠다</button>
+          <button class="filter-tag" data-filter="끈적이다">끈적이다</button>
+          <button class="filter-tag" data-filter="매끄럽다">매끄럽다</button>
+          <button class="filter-tag" data-filter="향기롭다">향기롭다</button>
+          <button class="filter-tag" data-filter="고소한">고소한</button>
+          <button class="filter-tag" data-filter="따뜻한">따뜻한</button>
+          <button class="filter-tag" data-filter="포근한">포근한</button>
+          <button class="filter-tag" data-filter="습막하는">습막하는</button>
+          <button class="filter-tag" data-filter="암도적인">암도적인</button>
+          <button class="filter-tag" data-filter="폐쇄적인">폐쇄적인</button>
+          <button class="filter-tag" data-filter="개방적인">개방적인</button>
+          <button class="filter-tag" data-filter="역동적인">역동적인</button>
+          <button class="filter-tag" data-filter="정적인">정적인</button>
+          <button class="filter-tag" data-filter="원형">원형</button>
+          <button class="filter-tag" data-filter="사각형">사각형</button>
+          <button class="filter-tag" data-filter="불규칙적">불규칙적</button>
+          <button class="filter-tag" data-filter="유기적">유기적</button>
+          <button class="filter-tag" data-filter="기하학적">기하학적</button>
+          <button class="filter-tag" data-filter="나무">나무</button>
+          <button class="filter-tag" data-filter="돌">돌</button>
+          <button class="filter-tag" data-filter="유리">유리</button>
+          <button class="filter-tag" data-filter="음영">음영</button>
+          <button class="filter-tag" data-filter="모던한">모던한</button>
+          <button class="filter-tag" data-filter="클래식">클래식</button>
+          <button class="filter-tag" data-filter="빈티지">빈티지</button>
+        </div>
+
+        <div class="filter-controls">
+          <button class="filter-reset-btn">초기화</button>
+        </div>
+      </div>
+
+      <!-- 통합 콘텐츠 섹션 -->
+      <section class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">추천 콘텐츠</h2>
+        </div>
+
+        <div class="grid-container">
+          <!-- 프로젝트 카드 -->
+          <div class="content-card" data-type="project" data-filters="interior,design" data-distance="2.5" data-date="2024-01-15" data-likes="45">
+            <div class="card-thumbnail-container">
+              <img class="card-thumbnail" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&h=300&fit=crop" alt="프로젝트 썸네일">
+              <div class="card-badge project">프로젝트</div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">모던 아파트 인테리어 리모델링 프로젝트</h3>
+              <div class="card-author">
+                <div class="card-author-avatar" style="background: linear-gradient(135deg, #F56342, #d94a2e); color: white; font-weight: 700; font-size: 12px;">
+                  D
+                </div>
+                <span>디자인 스튜디오</span>
+              </div>
+              <div class="card-meta">
+                <span class="card-distance">
+                  <svg class="icon-sm" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  2.5km
+                </span>
+                <span class="card-dot"></span>
+                <span>2일 전</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="card-stats">
+                <div class="card-stat" onclick="toggleLike(this, 'project1')">
+                  <svg class="card-icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="like-count">45</span>
+                </div>
+              </div>
+              <button class="card-share-btn" onclick="shareContent('project1', '모던 아파트 인테리어')">
+                <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 3D 라이브러리 카드 -->
+          <div class="content-card" data-type="library" data-filters="furniture,design" data-distance="1.2" data-date="2024-01-14" data-likes="89">
+            <div class="card-thumbnail-container">
+              <img class="card-thumbnail" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop" alt="3D 모델">
+              <div class="card-badge library">3D</div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">현대적인 소파 3D 모델</h3>
+              <div class="card-author">
+                <div class="card-author-avatar" style="background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; font-weight: 700; font-size: 11px;">
+                  3D
+                </div>
+                <span>3D Studio</span>
+              </div>
+              <div class="card-meta">
+                <span class="card-distance">
+                  <svg class="icon-sm" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  1.2km
+                </span>
+                <span class="card-dot"></span>
+                <span>3일 전</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="card-stats">
+                <div class="card-stat" onclick="toggleLike(this, 'lib1')">
+                  <svg class="card-icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="like-count">89</span>
+                </div>
+              </div>
+              <button class="card-download-btn">다운로드</button>
+            </div>
+          </div>
+
+          <!-- 상품 카드 -->
+          <div class="content-card" data-type="product" data-filters="lighting,design" data-distance="3.8" data-date="2024-01-13" data-likes="23">
+            <div class="card-thumbnail-container">
+              <img class="card-thumbnail" src="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=400&h=300&fit=crop" alt="상품">
+              <div class="card-badge product">상품</div>
+              <div class="card-discount">30%</div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">디자이너 펜던트 조명</h3>
+              <div class="card-author">
+                <div class="card-author-avatar" style="background: linear-gradient(135deg, #e67e22, #d35400); color: white; font-weight: 700; font-size: 12px;">
+                  LG
+                </div>
+                <span>조명 갤러리</span>
+              </div>
+              <div class="card-price">
+                <span class="card-original-price">100,000원</span>
+                70,000원
+              </div>
+              <div class="card-meta">
+                <div class="card-rating">
+                  <span class="card-star">★</span>
+                  4.8
+                </div>
+                <span class="card-dot"></span>
+                <span class="card-distance">
+                  <svg class="icon-sm" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  3.8km
+                </span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="card-stats">
+                <div class="card-stat" onclick="toggleLike(this, 'prod1')">
+                  <svg class="card-icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="like-count">23</span>
+                </div>
+              </div>
+              <button class="card-share-btn" onclick="shareContent('prod1', '디자이너 펜던트 조명')">
+                <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 추천 콘텐츠 더보기 버튼 -->
+        <div class="load-more-container">
+          <button class="load-more-btn">
+            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+            <span>더보기 (10/50)</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 3D 라이브러리 섹션 -->
+      <section class="content-section" id="library-section">
+        <div class="section-header">
+          <h2 class="section-title">3D 라이브러리</h2>
+        </div>
+
+        <div class="grid-container" id="library-grid">
+          <!-- 3D 카드들이 여기에 동적으로 로드됩니다 -->
+        </div>
+
+        <!-- 3D 라이브러리 더보기 버튼 -->
+        <div class="load-more-container">
+          <button class="load-more-btn" id="library-load-more">
+            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+            <span>더보기 (10/50)</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 상품 섹션 -->
+      <section class="content-section" id="product-section">
+        <div class="section-header">
+          <h2 class="section-title">상품</h2>
+        </div>
+
+        <div class="grid-container" id="product-grid">
+          <!-- 상품 카드들이 여기에 동적으로 로드됩니다 -->
+        </div>
+
+        <!-- 상품 더보기 버튼 -->
+        <div class="load-more-container">
+          <button class="load-more-btn" id="product-load-more">
+            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+            <span>더보기 (10/50)</span>
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="js/common.js"></script>
+</body>
+</html>

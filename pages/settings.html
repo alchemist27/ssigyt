@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>설정 - 씨익</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+  <!-- 헤더 -->
+  <div id="header-placeholder"></div>
+
+  <!-- 사이드바 -->
+  <div id="sidebar-placeholder"></div>
+
+  <!-- 메인 콘텐츠 -->
+  <main class="main-content">
+    <div class="settings-container">
+      <!-- 헤더 -->
+      <div class="settings-header">
+        <h1 class="settings-title">설정</h1>
+        <p class="settings-subtitle">프로필, 계정 및 알림 설정 관리</p>
+      </div>
+
+      <div class="settings-content">
+        <!-- 설정 메뉴 -->
+        <nav class="settings-menu desktop-only">
+          <div class="settings-menu-item active">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+            프로필
+          </div>
+          <div class="settings-menu-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+            알림
+          </div>
+          <div class="settings-menu-item">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+            보안
+          </div>
+        </nav>
+
+        <!-- 설정 패널 -->
+        <div class="settings-panel">
+          <!-- 프로필 설정 -->
+          <section class="settings-section">
+            <h2 class="settings-section-title">프로필 정보</h2>
+
+            <div class="settings-item">
+              <label class="settings-item-label">프로필 이미지</label>
+              <div class="profile-upload">
+                <div class="profile-upload-preview">
+                  <img src="https://via.placeholder.com/100" alt="프로필">
+                </div>
+                <div class="profile-upload-actions">
+                  <button class="btn btn-secondary">이미지 변경</button>
+                  <button class="btn btn-secondary">삭제</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="settings-item">
+              <label class="settings-item-label">이름</label>
+              <input type="text" class="form-input" value="디자인 스튜디오" placeholder="이름을 입력하세요">
+            </div>
+
+            <div class="settings-item">
+              <label class="settings-item-label">채널 URL</label>
+              <input type="text" class="form-input" value="@designstudio" placeholder="@username">
+              <p class="settings-item-description">씨익.com/@designstudio</p>
+            </div>
+
+            <div class="settings-item">
+              <label class="settings-item-label">소개</label>
+              <textarea class="form-textarea" placeholder="자신을 소개하세요">모던하고 세련된 인테리어 디자인을 전문으로 합니다.</textarea>
+            </div>
+
+            <div class="settings-item">
+              <label class="settings-item-label">이메일</label>
+              <input type="email" class="form-input" value="studio@example.com" placeholder="email@example.com">
+            </div>
+
+            <div class="settings-item">
+              <label class="settings-item-label">전화번호</label>
+              <input type="tel" class="form-input" value="010-1234-5678" placeholder="010-0000-0000">
+            </div>
+
+            <button class="settings-save-btn">
+              <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              변경사항 저장
+            </button>
+          </section>
+
+          <!-- 소셜 링크 -->
+          <section class="settings-section">
+            <h2 class="settings-section-title">소셜 링크</h2>
+
+            <div class="link-list">
+              <div class="link-item">
+                <div class="link-item-icon">
+                  <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                  </svg>
+                </div>
+                <div class="link-item-info">
+                  <div class="link-item-name">웹사이트</div>
+                  <div class="link-item-url">https://designstudio.com</div>
+                </div>
+                <div class="link-item-actions">
+                  <button class="link-item-btn">
+                    <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                    </svg>
+                  </button>
+                  <button class="link-item-btn">
+                    <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="link-item">
+                <div class="link-item-icon">
+                  <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+                  </svg>
+                </div>
+                <div class="link-item-info">
+                  <div class="link-item-name">Instagram</div>
+                  <div class="link-item-url">@designstudio</div>
+                </div>
+                <div class="link-item-actions">
+                  <button class="link-item-btn">
+                    <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                    </svg>
+                  </button>
+                  <button class="link-item-btn">
+                    <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-secondary" style="margin-top: var(--spacing-md); width: 100%;">
+              <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+              </svg>
+              링크 추가
+            </button>
+          </section>
+
+          <!-- 알림 설정 -->
+          <section class="settings-section">
+            <h2 class="settings-section-title">알림 설정</h2>
+
+            <div class="settings-toggle-item">
+              <div class="settings-toggle-info">
+                <div class="settings-toggle-label">새 팔로워</div>
+                <div class="settings-toggle-description">누군가 나를 팔로우할 때 알림 받기</div>
+              </div>
+              <div class="toggle-switch active" onclick="this.classList.toggle('active')">
+                <div class="toggle-switch-handle"></div>
+              </div>
+            </div>
+
+            <div class="settings-toggle-item">
+              <div class="settings-toggle-info">
+                <div class="settings-toggle-label">좋아요</div>
+                <div class="settings-toggle-description">누군가 내 콘텐츠에 좋아요를 누를 때 알림 받기</div>
+              </div>
+              <div class="toggle-switch active" onclick="this.classList.toggle('active')">
+                <div class="toggle-switch-handle"></div>
+              </div>
+            </div>
+
+            <div class="settings-toggle-item">
+              <div class="settings-toggle-info">
+                <div class="settings-toggle-label">댓글</div>
+                <div class="settings-toggle-description">누군가 댓글을 남길 때 알림 받기</div>
+              </div>
+              <div class="toggle-switch active" onclick="this.classList.toggle('active')">
+                <div class="toggle-switch-handle"></div>
+              </div>
+            </div>
+
+            <div class="settings-toggle-item">
+              <div class="settings-toggle-info">
+                <div class="settings-toggle-label">이메일 알림</div>
+                <div class="settings-toggle-description">중요한 업데이트를 이메일로 받기</div>
+              </div>
+              <div class="toggle-switch" onclick="this.classList.toggle('active')">
+                <div class="toggle-switch-handle"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 위험 구역 -->
+          <section class="settings-section danger-zone">
+            <h2 class="settings-section-title">위험 구역</h2>
+
+            <div class="settings-item">
+              <label class="settings-item-label">계정 삭제</label>
+              <p class="settings-item-description" style="margin-bottom: var(--spacing-md);">
+                계정을 삭제하면 모든 데이터가 영구적으로 삭제되며 복구할 수 없습니다.
+              </p>
+              <button class="danger-btn">계정 삭제</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="../js/common.js"></script>
+  <script>
+    // 설정 저장
+    document.querySelector('.settings-save-btn').addEventListener('click', () => {
+      showToast('설정이 저장되었습니다');
+    });
+  </script>
+</body>
+</html>

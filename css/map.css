@@ -1,0 +1,356 @@
+/* 지도 페이지 스타일 */
+
+.map-main-content {
+  padding: 0 !important;
+}
+
+.map-container {
+  display: flex;
+  height: calc(100vh - var(--header-height));
+  gap: 0;
+  overflow: hidden;
+}
+
+.map-view {
+  flex: 1;
+  position: relative;
+  background-color: var(--bg-tertiary);
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.map-controls {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  z-index: 10;
+}
+
+.map-control-btn {
+  width: 44px;
+  height: 44px;
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.map-control-btn:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.map-control-btn svg {
+  width: 20px;
+  height: 20px;
+  color: var(--bg-primary);
+}
+
+.map-search {
+  position: absolute;
+  top: var(--spacing-md);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  z-index: 10;
+}
+
+.map-search-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 48px 0 var(--spacing-md);
+  background-color: white;
+  border: none;
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+  font-size: 14px;
+  color: var(--bg-primary);
+}
+
+.map-search-input::placeholder {
+  color: #999;
+}
+
+.map-search-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background-color: var(--brand-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.map-search-btn svg {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+/* 지도 사이드 패널 */
+.map-sidebar {
+  width: 420px;
+  background-color: var(--bg-secondary);
+  border-left: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.map-sidebar-header {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.map-sidebar-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.map-filter-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.map-filter-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.map-filter-select {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.map-filter-select:hover {
+  border-color: var(--text-secondary);
+}
+
+.map-filter-select:focus {
+  outline: none;
+  border-color: var(--brand-blue);
+  background-color: var(--bg-primary);
+}
+
+.map-sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-md);
+}
+
+.map-results-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+/* 지도 마커 카드 */
+.map-place-card {
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--border-color);
+}
+
+.map-place-card:hover {
+  border-color: var(--brand-blue);
+  background-color: var(--bg-hover);
+}
+
+.map-place-card.active {
+  border-color: var(--brand-orange);
+  background-color: var(--bg-hover);
+}
+
+.map-place-card-content {
+  padding: var(--spacing-md);
+}
+
+.map-place-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.map-place-address {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.map-place-distance {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.map-place-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.map-place-star {
+  color: #ffc107;
+  font-size: 14px;
+}
+
+.map-place-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.map-place-btn {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.map-place-btn.primary {
+  background-color: var(--brand-blue);
+  color: white;
+}
+
+.map-place-btn.primary:hover {
+  background-color: #008fcc;
+}
+
+.map-place-btn.secondary {
+  background-color: var(--brand-orange);
+  color: white;
+}
+
+.map-place-btn.secondary:hover {
+  background-color: #e05535;
+}
+
+/* 모바일 토글 버튼 */
+.map-toggle-sidebar {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: var(--spacing-md);
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.map-toggle-sidebar svg {
+  width: 24px;
+  height: 24px;
+  color: var(--bg-primary);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .map-container {
+    flex-direction: column;
+  }
+
+  .map-sidebar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50vh;
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    transform: translateY(calc(100% - 80px));
+    transition: transform var(--transition-normal);
+    z-index: 100;
+  }
+
+  .map-sidebar.expanded {
+    transform: translateY(0);
+  }
+
+  .map-sidebar-header {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .map-sidebar-header::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background-color: var(--border-color);
+    border-radius: 2px;
+  }
+
+  .map-search {
+    top: 80px;
+    width: calc(100% - 32px);
+  }
+
+  .map-controls {
+    right: var(--spacing-md);
+    left: auto;
+    top: 140px;
+  }
+
+  .map-toggle-sidebar {
+    display: flex;
+  }
+}
+
+/* 태블릿 반응형 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .map-sidebar {
+    width: 360px;
+  }
+}

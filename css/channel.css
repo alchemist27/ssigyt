@@ -1,0 +1,414 @@
+/* 마이채널 페이지 스타일 */
+
+.channel-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.channel-header {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--spacing-lg);
+}
+
+.channel-header-grid {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  gap: var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.channel-profile-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.channel-banner-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.channel-banner {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, var(--brand-orange), var(--brand-blue));
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.channel-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.channel-banner-edit {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-md);
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.channel-banner-edit:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.channel-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--bg-primary);
+  background-color: var(--bg-tertiary);
+  overflow: hidden;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.channel-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.channel-avatar-large {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid var(--bg-primary);
+  background-color: var(--bg-tertiary);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.channel-avatar-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.channel-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.channel-info-simple {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.channel-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.channel-detail {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.channel-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.channel-url {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.channel-url a {
+  color: var(--brand-blue);
+  text-decoration: none;
+}
+
+.channel-url a:hover {
+  text-decoration: underline;
+}
+
+.channel-stats {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-sm);
+}
+
+.channel-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.channel-stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.channel-stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.channel-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+}
+
+.channel-btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.channel-btn-primary {
+  background-color: var(--brand-orange);
+  color: white;
+}
+
+.channel-btn-primary:hover {
+  background-color: #e05535;
+}
+
+.channel-btn-secondary {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.channel-btn-secondary:hover {
+  background-color: var(--bg-hover);
+}
+
+/* 채널 탭 */
+.channel-tabs {
+  display: flex;
+  gap: var(--spacing-sm);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--spacing-lg);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.channel-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.channel-tab {
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.channel-tab:hover {
+  color: var(--text-primary);
+}
+
+.channel-tab.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--brand-blue);
+}
+
+/* 채널 콘텐츠 */
+.channel-content {
+  min-height: 400px;
+}
+
+.channel-tab-content {
+  display: none;
+}
+
+.channel-tab-content.active {
+  display: block;
+}
+
+.channel-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+  min-height: 300px;
+}
+
+.channel-empty-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--bg-tertiary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-tertiary);
+}
+
+.channel-empty-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.channel-empty-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.channel-empty-description {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+/* 채널 소셜 링크 */
+.channel-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.channel-social-link {
+  padding: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.channel-social-link:hover {
+  color: var(--text-primary);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .channel-header-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .channel-banner-section {
+    order: -1;
+  }
+
+  .channel-banner {
+    height: 150px;
+  }
+
+  .channel-profile-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .channel-avatar {
+    width: 80px;
+    height: 80px;
+    border-width: 3px;
+  }
+
+  .channel-avatar-large {
+    width: 120px;
+    height: 120px;
+    border-width: 4px;
+  }
+
+  .channel-info {
+    width: 100%;
+  }
+
+  .channel-info-simple {
+    width: 100%;
+  }
+
+  .channel-name {
+    font-size: 22px;
+  }
+
+  .channel-stats {
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+
+  .channel-stat-value {
+    font-size: 18px;
+  }
+
+  .channel-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .channel-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .channel-tabs {
+    padding: 0 var(--spacing-md);
+    gap: var(--spacing-xs);
+  }
+
+  .channel-tab {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 13px;
+  }
+}
+
+/* 태블릿 반응형 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .channel-banner {
+    height: 175px;
+  }
+
+  .channel-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .channel-avatar-large {
+    width: 150px;
+    height: 150px;
+  }
+
+  .channel-name {
+    font-size: 24px;
+  }
+}

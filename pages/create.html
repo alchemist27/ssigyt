@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>등록하기 - 씨익</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <link rel="stylesheet" href="../css/create.css">
+</head>
+<body>
+  <!-- 헤더 -->
+  <div id="header-placeholder"></div>
+
+  <!-- 사이드바 -->
+  <div id="sidebar-placeholder"></div>
+
+  <!-- 메인 콘텐츠 -->
+  <main class="main-content">
+    <div class="create-container">
+      <!-- 헤더 -->
+      <div class="create-header">
+        <h1 class="create-title">새 콘텐츠 등록</h1>
+        <p class="create-subtitle">프로젝트, 3D 모델, 상품 또는 광고를 등록하세요</p>
+      </div>
+
+      <!-- 등록 유형 선택 -->
+      <div class="create-type-selector">
+        <div class="create-type-card active" data-type="project">
+          <div class="create-type-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <div class="create-type-name">프로젝트</div>
+          <div class="create-type-description">완성된 프로젝트 공유</div>
+        </div>
+
+        <div class="create-type-card" data-type="library">
+          <div class="create-type-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+            </svg>
+          </div>
+          <div class="create-type-name">3D 모델</div>
+          <div class="create-type-description">3D 라이브러리 등록</div>
+        </div>
+
+        <div class="create-type-card" data-type="product">
+          <div class="create-type-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+          </div>
+          <div class="create-type-name">상품</div>
+          <div class="create-type-description">판매 상품 등록</div>
+        </div>
+
+        <div class="create-type-card" data-type="ad">
+          <div class="create-type-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/>
+            </svg>
+          </div>
+          <div class="create-type-name">광고</div>
+          <div class="create-type-description">광고 캠페인 등록</div>
+        </div>
+      </div>
+
+      <!-- 등록 폼 -->
+      <form class="create-form">
+        <!-- 기본 정보 -->
+        <div class="form-section">
+          <h2 class="form-section-title">
+            기본 정보
+            <span class="form-section-required">* 필수</span>
+          </h2>
+
+          <div class="form-group">
+            <label class="form-label form-label-required">제목</label>
+            <input type="text" class="form-input" placeholder="프로젝트 제목을 입력하세요" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label form-label-required">설명</label>
+            <textarea class="form-textarea" placeholder="프로젝트에 대한 자세한 설명을 입력하세요" required></textarea>
+            <span class="form-hint">최소 50자 이상 작성해주세요</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label form-label-required">카테고리</label>
+            <select class="form-select" required>
+              <option value="">카테고리 선택</option>
+              <option value="interior">인테리어</option>
+              <option value="architecture">건축</option>
+              <option value="landscape">조경</option>
+              <option value="design">디자인</option>
+              <option value="furniture">가구</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 이미지 및 파일 -->
+        <div class="form-section">
+          <h2 class="form-section-title">
+            이미지 및 파일
+            <span class="form-section-required">* 필수</span>
+          </h2>
+
+          <div class="form-group">
+            <label class="form-label form-label-required">썸네일 이미지</label>
+            <div class="file-upload-area" onclick="document.getElementById('file-input').click()">
+              <div class="file-upload-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <p class="file-upload-text">클릭하거나 파일을 드래그하세요</p>
+              <p class="file-upload-hint">JPG, PNG 최대 10MB</p>
+              <input type="file" id="file-input" class="file-upload-input" accept="image/*" multiple>
+            </div>
+            <div class="file-preview-grid" id="file-preview">
+              <!-- 업로드된 파일 미리보기가 여기에 표시됩니다 -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 태그 -->
+        <div class="form-section">
+          <h2 class="form-section-title">태그</h2>
+          <div class="form-group">
+            <label class="form-label">키워드 태그</label>
+            <div class="tag-input-container" onclick="document.getElementById('tag-input').focus()">
+              <div class="tag-item">
+                모던
+                <span class="tag-remove" onclick="event.stopPropagation(); this.parentElement.remove()">×</span>
+              </div>
+              <div class="tag-item">
+                미니멀
+                <span class="tag-remove" onclick="event.stopPropagation(); this.parentElement.remove()">×</span>
+              </div>
+              <input type="text" id="tag-input" class="tag-input" placeholder="태그 입력 후 Enter">
+            </div>
+            <span class="form-hint">Enter 키를 눌러 태그를 추가하세요</span>
+          </div>
+        </div>
+
+        <!-- 액션 버튼 -->
+        <div class="form-actions">
+          <button type="button" class="form-btn form-btn-cancel" onclick="history.back()">취소</button>
+          <button type="button" class="form-btn form-btn-save">임시저장</button>
+          <button type="submit" class="form-btn form-btn-submit">
+            <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            등록하기
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="../js/common.js"></script>
+  <script>
+    // 등록 유형 선택
+    document.querySelectorAll('.create-type-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('.create-type-card').forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        console.log('선택된 유형:', card.dataset.type);
+      });
+    });
+
+    // 파일 업로드
+    const fileInput = document.getElementById('file-input');
+    const filePreview = document.getElementById('file-preview');
+
+    fileInput.addEventListener('change', (e) => {
+      const files = Array.from(e.target.files);
+      files.forEach(file => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const div = document.createElement('div');
+          div.className = 'file-preview-item';
+          div.innerHTML = `
+            <img src="${e.target.result}" alt="미리보기">
+            <button class="file-preview-remove" onclick="this.parentElement.remove()">
+              <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          `;
+          filePreview.appendChild(div);
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+
+    // 태그 입력
+    const tagInput = document.getElementById('tag-input');
+    tagInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const value = tagInput.value.trim();
+        if (value) {
+          const tag = document.createElement('div');
+          tag.className = 'tag-item';
+          tag.innerHTML = `
+            ${value}
+            <span class="tag-remove" onclick="event.stopPropagation(); this.parentElement.remove()">×</span>
+          `;
+          tagInput.parentElement.insertBefore(tag, tagInput);
+          tagInput.value = '';
+        }
+      }
+    });
+
+    // 폼 제출
+    document.querySelector('.create-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('등록이 완료되었습니다!');
+      setTimeout(() => {
+        window.location.href = 'channel.html';
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
